@@ -2,7 +2,9 @@
 
 ## Update
 
-To run the below commands and avoid any old dependency issues, I recommend you to use node.s version 9.11.2.
+![](demo.gif)
+
+To run the below commands and avoid any old dependency issues, I recommend you use node.js version __9.11.2__.
 
 
 
