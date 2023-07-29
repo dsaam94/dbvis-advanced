@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Data Visualization: Advanced Topics - WS 20/21</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+    </style>
+
+<script type="text/javascript" src="../src/main.js"></script>
+</head>
+<body>
+    <div id="ui" class="container">
+        <h1>Data Visualization: Advanced Topics - WS 20/21</h1>
+
+
+
+
+        
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#scatterplot">Scatterplot</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#scatterplot-matrix">SPLOM</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#pcplot">PCP</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tsne">TSNE</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mds">MDS</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#pixel">Pixel-based</a></li> <!-- Pablo -->
+            </ul>
+
+            <div id="dropdown" class="ml-auto">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Dataset
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>             
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="tab-content">
+            <div id="scatterplot" class="tab-pane fade">
+                <br />
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">MST</label>
+                </div>
+                <div id="scatter-vis"></div>
+            </div>
+            <div id="scatterplot-matrix" class="tab-pane">
+                <br />
+                <div id="splom-vis"></div>
+                <div id="slider-div" class="row" style="opacity:0">
+                    <div id="slider-text" class="col-md-3">Outlying Threshold: </div>
+                    <input class="col-md-2" id="slider" type="range" min="1" max="100" value="50" class="slider">
+                    <div class="checkbox-splom col-md-offset-4 col-md-1">
+                        <label><input type="checkbox" value="">MST</label>
+                    </div>
+                </div>
+            </div>
+            <div id="pcplot" class="tab-pane">
+                <br />
+                <div id="pcp-vis"></div>
+                <div id="slider-div-pcp" class="row" style="opacity:0">
+                    <div id="alpha-text" class="col-md-2">Alpha: </div>
+                    <input class="col-md-2 slider" id="slider-alpha" type="range" min="0" max="1" value="0.5">
+                    <div id="beta-text" class="col-md-2 offset-md-1">Beta: </div>
+                    <input class="col-md-2 slider" id="slider-beta" type="range" min="0" max="1" value="0.5">
+                </div>
+            </div>
+            <div id="tsne" class="tab-pane">
+                <br />
+                <div id="slider-tsne-div" class="row" style="display: block;">
+                    <div id="slider-tsne-iterations-text" class="col-md-3"><span id="slider-tsne-iterations-text-inner">Iterations: 150</span></div>
+                    <input id="slider-tsne-iterations" type="range" min="100" max="500" step="10" value="150" class="slider">
+
+                    <div id="slider-tsne-lr-text" class="col-md-3"><span id="slider-tsne-lr-text-inner">Learning Rate: 180</span></div>
+                    <input id="slider-tsne-lr" type="range" min="1" max="1000" step="1" value="180" class="slider">
+
+                    <div id="slider-tsne-perplexity-text" class="col-md-3"><span id="slider-tsne-perplexity-text-inner">Perplexity: 15</span></div>
+                    <input id="slider-tsne-perplexity" type="range" min="5" max="100" step="1" value="5" class="slider">
+
+                    <button id="tsne-button" type="button" onclick="" >Plot</button>
+                </div>
+                <div id="tsne-vis"></div>
+            </div>
+            <div id="mds" class="tab-pane">
+                <br />
+                <div id="mds-vis"></div>
+            </div>
+            <div id="pixel" class="tab-pane"> <!-- Pablo -->
+                <br />
+                <div id="pixel-vis"></div>
+            </div>
+            <div id="home" class="tab-pane fade"></div>
+        </div>
+
+
+    </div>
+</body>
+</html>
