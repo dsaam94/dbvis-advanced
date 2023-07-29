@@ -80,7 +80,6 @@ $(document).ready(function () {
 
         }
 
-        ///done by Pablo
         else if ($("#pixel").hasClass("active")) {    //Pixel tab is active
 
             createPixel($(this).attr('id'));
@@ -283,7 +282,6 @@ function createTSNE(id) {
 }
 
 //create pixel from the main MDS class
-///done by Pablo
 function createPixel(id) {
 
     //Load selected dataset (promise as d3.csv is async)

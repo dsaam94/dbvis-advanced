@@ -135,14 +135,6 @@ export function makeArray(n) {
     return arr;
 }
 
-/*
- * Finds closest lower power of 2
- */
-///copied from the internet by Pablo
-export function nearestPowerOf2(n) {
-  return 1 << 31 - Math.clz32(n);
-}
-
 /**
  * Returns the euclidean distance matrix for input data points
  */
