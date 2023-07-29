@@ -1,5 +1,12 @@
 # Data Visualization: Advanced Topics - Programming Framework
 
+## Update
+
+To run the below commands and avoid any old dependency issues, I recommend you to use node.s version 9.11.2.
+
+
+
+
 ## Project Structure
 
 This project uses the __Node Package Manager (NPM)__  to install external dependencies, such as D3 or Bootstrap automatically.
